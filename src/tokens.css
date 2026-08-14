@@ -1,0 +1,103 @@
+/* Upper Cumberland Auto — design tokens. One production visual system.
+
+   The palette is the house system carried over from Middle TN Printers with a
+   different hue: deep green ground, warm paper canvas, and one rust flag colour
+   used for exactly one job — marking a business with no real web address. That
+   flag is the only colour on the page that means something, which is why
+   nothing else is allowed to use it.
+
+   Every pair a reader actually has to read is asserted at 4.5:1 or better by
+   scripts/verify.py, in both schemes. Change a value here and that check is
+   what tells you whether you got away with it. */
+:root {
+  color-scheme: light dark;
+
+  --color-canvas: #f7f6f2;
+  --color-canvas-alt: #eeece5;
+  --color-surface: #ffffff;
+  --color-text: #1b2220;
+  --color-text-muted: #55605c;
+  --color-accent: #1f5d4c;
+  --color-accent-ink: #ffffff;
+  --color-accent-soft: #e2efe9;
+  --color-rule: #d3d0c7;
+  --color-rule-strong: #1b2220;
+  --color-appbar: #17322a;
+  --color-appbar-text: #f7f6f2;
+  --color-appbar-muted: #c7d4ce;
+  --color-focus: #0b5ed7;
+  --color-error: #8f2323;
+  --color-flag: #8a4b16;
+  --color-flag-soft: #f6ece1;
+
+  --font-heading: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  --fs-base: 1.0625rem;
+  --fs-small: 0.8125rem;
+  --fs-label: 0.75rem;
+  --fs-lede: 1.125rem;
+  --fs-subheading: 1.25rem;
+  --fs-h1: clamp(2.1rem, 5.5vw, 3.9rem);
+  --fs-h2: clamp(1.45rem, 3vw, 2.15rem);
+  --fs-h3: clamp(1.2rem, 2.2vw, 1.5rem);
+  --lh-body: 1.6;
+  --lh-heading: 1.06;
+  --tracking-heading: -0.03em;
+  --tracking-label: 0.07em;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-page: clamp(1rem, 4vw, 2rem);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --rule-thin: 1px;
+  --rule-heavy: 4px;
+  --shadow-raised: 0 0.5rem 1.25rem rgb(27 34 32 / 8%);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --transition-fast: var(--duration-fast) var(--ease-out);
+
+  --measure: 68ch;
+  --content: 76rem;
+  --directory-sidebar: 17rem;
+  --touch-target: 2.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-canvas: #101614;
+    --color-canvas-alt: #161f1c;
+    --color-surface: #19231f;
+    --color-text: #eef2f0;
+    --color-text-muted: #b4c1bb;
+    --color-accent: #6fd3b2;
+    --color-accent-ink: #06231b;
+    --color-accent-soft: #14352c;
+    --color-rule: #3a4a44;
+    --color-rule-strong: #dde5e1;
+    --color-appbar: #0a1210;
+    --color-appbar-text: #f2f6f4;
+    --color-appbar-muted: #b4c1bb;
+    --color-focus: #8eb4ff;
+    --color-error: #ff9d98;
+    --color-flag: #e0a86a;
+    --color-flag-soft: #2b2116;
+    --shadow-raised: 0 0.5rem 1.25rem rgb(0 0 0 / 32%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}

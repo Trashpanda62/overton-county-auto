@@ -1,0 +1,6 @@
+# Policy: allow indexing and cited AI answers; reserve model-training rights.
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://overtoncountyauto.com/sitemap.xml
